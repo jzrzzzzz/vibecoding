@@ -1,0 +1,174 @@
+// ============================================================
+// 奶龙德州扑克 — 全局样式 & 主题变量
+// ============================================================
+
+// ---- 奶龙主题色板 ----
+:root {
+  --color-primary: #FFD76D;
+  --color-primary-dark: #E8B840;
+  --color-secondary: #8BC34A;
+  --color-accent: #FF8A65;
+  --color-bg: #FFF8E1;
+  --color-surface: #FFFFFF;
+  --color-text: #4E342E;
+  --color-text-light: #8D6E63;
+
+  // 牌桌专用
+  --table-felt: #2E7D32;
+  --table-border: #1B5E20;
+  --chip-gold: #FFC107;
+  --chip-shadow: #E8A800;
+  --card-back: #FFD76D;
+
+  // 功能色
+  --color-fold: #EF5350;
+  --color-check: #FFD76D;
+  --color-call: #8BC34A;
+  --color-raise: #FF8A65;
+  --color-allin: #E53935;
+
+  // 圆角
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-round: 50%;
+
+  // 阴影
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+// ---- 全局重置 ----
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+// ---- 通用工具类 ----
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// ---- 页面背景 ----
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+// ---- 按钮基础 ----
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--primary {
+    background: var(--color-primary);
+    color: var(--color-text);
+
+    &:hover {
+      background: var(--color-primary-dark);
+    }
+  }
+
+  &--secondary {
+    background: var(--color-secondary);
+    color: white;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  &--danger {
+    background: var(--color-fold);
+    color: white;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  &--large {
+    padding: 16px 40px;
+    font-size: 20px;
+    border-radius: 28px;
+  }
+}
+
+// ---- 卡片容器 ----
+.card-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+// ---- 标题 ----
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+
+  &--hero {
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

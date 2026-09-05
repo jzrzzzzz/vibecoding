@@ -1,0 +1,129 @@
+.card {
+  width: 100px;
+  height: 140px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  &.small {
+    width: 64px;
+    height: 90px;
+    border-radius: 7px;
+  }
+}
+
+.highlighted {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 215, 109, 0.7);
+  border: 2px solid #FFD76D;
+}
+
+// ---- 牌面颜色 ----
+.red {
+  color: #D32F2F;
+}
+
+.black {
+  color: #212121;
+}
+
+// ---- 角标 ----
+.cornerTop {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+
+  .small & {
+    top: 4px;
+    left: 5px;
+  }
+}
+
+.cornerBottom {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(180deg);
+  line-height: 1;
+
+  .small & {
+    bottom: 4px;
+    right: 5px;
+  }
+}
+
+.rank {
+  font-size: 18px;
+  font-weight: 700;
+  .small & { font-size: 13px; }
+}
+
+.suit {
+  font-size: 14px;
+  .small & { font-size: 10px; }
+}
+
+// ---- 中央花色 ----
+.center {
+  opacity: 0.12;
+  .small & { opacity: 0.15; }
+}
+
+.centerSuit {
+  font-size: 50px;
+  .small & { font-size: 32px; }
+}
+
+// ---- 牌背（奶龙主题） ----
+.faceDown {
+  background: var(--card-back);
+  cursor: default;
+
+  &:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.backIcon {
+  font-size: 28px;
+  opacity: 0.3;
+  .small & { font-size: 18px; }
+}
+
+.backText {
+  font-size: 12px;
+  font-weight: 700;
+  color: #C8A030;
+  opacity: 0.4;
+  margin-top: 2px;
+  .small & { font-size: 8px; }
+}

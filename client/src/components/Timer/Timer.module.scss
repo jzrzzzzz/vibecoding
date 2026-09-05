@@ -1,0 +1,25 @@
+.timer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.critical {
+    animation: pulse 0.5s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.text {
+  position: absolute;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  .urgent & { color: #FFD76D; }
+  .critical & { color: #EF5350; }
+}

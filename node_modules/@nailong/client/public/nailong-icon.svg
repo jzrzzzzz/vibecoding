@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#FFD76D" stroke="#E8B840" stroke-width="3"/>
+  <!-- 眼睛 -->
+  <ellipse cx="35" cy="42" rx="8" ry="9" fill="white"/>
+  <ellipse cx="65" cy="42" rx="8" ry="9" fill="white"/>
+  <circle cx="35" cy="43" r="5" fill="#4E342E"/>
+  <circle cx="65" cy="43" r="5" fill="#4E342E"/>
+  <circle cx="37" cy="40" r="2" fill="white"/>
+  <circle cx="67" cy="40" r="2" fill="white"/>
+  <!-- 微笑 -->
+  <path d="M35 62 Q50 78 65 62" fill="none" stroke="#4E342E" stroke-width="3" stroke-linecap="round"/>
+  <!-- 龙角 -->
+  <path d="M28 20 L22 8 L32 22" fill="#E8B840" stroke="#C8A030" stroke-width="1.5"/>
+  <path d="M72 20 L78 8 L68 22" fill="#E8B840" stroke="#C8A030" stroke-width="1.5"/>
+  <!-- 鼻孔 -->
+  <ellipse cx="43" cy="55" rx="3" ry="2" fill="#E8B840"/>
+  <ellipse cx="57" cy="55" rx="3" ry="2" fill="#E8B840"/>
+</svg>
